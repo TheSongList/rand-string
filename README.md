@@ -2,11 +2,12 @@
 Generates a random string of a specified length.
 
 # Usage
-Currently there are 4 types:
+Currently there are 5 types:
 - uppercase
 - lowercase
 - upperlower
-- alphanumerical 
+- alphanumerical
+- ascii
 
 You can probably guess what each one would create
 
@@ -38,4 +39,10 @@ alphanumerical:
 ```py
 print(RandString("alphanumerical", 10))
 # Output: Fy0Nbqno6B
+```
+
+ascii:
+```py
+print(RandString("ascii", 10))
+# Output: jtj-NV<PSV
 ```

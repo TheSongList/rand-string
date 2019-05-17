@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
 setup(
   name = "rand-string",
   packages = ["rand-string"],
-  version = "0.23",
+  version = "0.3",
   license="MIT",
   description = "Generates a random string of a specified length.",
   long_description=readme,

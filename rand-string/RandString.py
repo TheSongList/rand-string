@@ -36,5 +36,14 @@ def RandString(type, length):
             else: code = rand.randint(48, 57)
             response += chr(code)
         return response
+    elif type == "ascii":
+        response = ""
+        choice = 0
+        code = 0
+        for i in range(length):
+            choice = rand.randint(0, 1)
+            if choice == 0: code = rand.randint(33, 95)
+            else: code = rand.randint(97, 125)
+            response += chr(code)
+        return response
     else: raise Exception("Invalid type in RandString({}, {})".format(type, length))
-print(RandString("alphanumerical", 10))
