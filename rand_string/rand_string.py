@@ -9,41 +9,39 @@ def RandString(type, length):
             code = rand.randint(65, 90)
             response += chr(code)
         return response
+
     elif type == "lowercase":
         response = ""
         for i in range(length):
             code = rand.randint(97, 122)
             response += chr(code)
         return response
+
     elif type == "upperlower":
         response = ""
-        choices = ["upper", "lower"]
-        code = 0
-        for i in range(length):
-            choice = rand.choice(choices)
-            if choice == "upper": code = rand.randint(65, 90)
-            else: code = rand.randint(97, 122)
-            response += chr(code)
-        return response
-    elif type == "alphanumerical":
-        response = ""
-        choices = ["upper", "lower", "number"]
-        code = 0
-        for i in range(length):
-            choice = rand.choice(choices)
-            if choice == "upper": code = rand.randint(65, 90)
-            elif choice == "lower": code = rand.randint(97, 122)
-            else: code = rand.randint(48, 57)
-            response += chr(code)
-        return response
-    elif type == "ascii":
-        response = ""
-        choice = 0
         code = 0
         for i in range(length):
             choice = rand.randint(0, 1)
-            if choice == 0: code = rand.randint(33, 95)
-            else: code = rand.randint(97, 125)
+            if choice == 0: code = rand.randint(65, 90)
+            else: code = rand.randint(97, 122)
+            response += chr(code)
+        return response
+
+    elif type == "alphanumerical":
+        response = ""
+        code = 0
+        for i in range(length):
+            choice = rand.randint(0, 2)
+            if choice == 0: code = rand.randint(65, 90)
+            elif choice == 1: code = rand.randint(97, 122)
+            else: code = rand.randint(48, 57)
+            response += chr(code)
+        return response
+        
+    elif type == "ascii":
+        response = ""
+        for i in range(length):
+            code = rand.randint(33, 126)
             response += chr(code)
         return response
     else: raise Exception("Invalid type in RandString({}, {})".format(type, length))
