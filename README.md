@@ -1,4 +1,4 @@
-# rand-string
+# random-string
 Generates a random string of a specified length.
 
 # Usage
