@@ -1,5 +1,5 @@
 # rand-string
-Generates a random string of a specified length.
+Generates a "random" string of a specified length.
 
 # Usage
 Currently there are 5 types:
